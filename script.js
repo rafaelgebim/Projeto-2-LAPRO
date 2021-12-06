@@ -9,10 +9,15 @@ input_valor.addEventListener('keyup', (ev) => {
 
 function addValue() {
     var numberInput = input_valor.value
-    lista.push(Number(numberInput))
+    if (numberInput === "" || numberInput == 0) {
 
-    input_valor.value = ''
-    document.getElementById("lbl_qtnitens").innerHTML = lista.length
+    }
+    else {
+        lista.push(Number(numberInput))
+
+        input_valor.value = ''
+        document.getElementById("lbl_qtnitens").innerHTML = lista.length
+    }
 }
 
 
